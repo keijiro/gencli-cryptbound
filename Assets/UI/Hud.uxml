@@ -1,0 +1,90 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <ui:Style src="Hud.uss" />
+    <ui:VisualElement name="root" class="root layer" picking-mode="Ignore">
+        <ui:VisualElement name="damageLayer" class="layer" picking-mode="Ignore" />
+        <ui:VisualElement name="stats" class="stats" picking-mode="Ignore">
+            <ui:VisualElement class="stat-row">
+                <ui:Label text="HP" class="stat-label" />
+                <ui:VisualElement class="bar">
+                    <ui:VisualElement name="hpTrail" class="bar-trail" />
+                    <ui:VisualElement name="hpFill" class="bar-fill hp-fill" />
+                </ui:VisualElement>
+                <ui:Label name="hpValue" text="320 / 320" class="stat-value" />
+            </ui:VisualElement>
+            <ui:VisualElement class="stat-row">
+                <ui:Label text="Stamina" class="stat-label" />
+                <ui:VisualElement class="bar">
+                    <ui:VisualElement name="stTrail" class="bar-trail" />
+                    <ui:VisualElement name="stFill" class="bar-fill stamina-fill" />
+                </ui:VisualElement>
+                <ui:Label name="stValue" text="180 / 180" class="stat-value" />
+            </ui:VisualElement>
+            <ui:VisualElement class="stat-row">
+                <ui:Label text="EXP" class="stat-label" />
+                <ui:VisualElement class="bar">
+                    <ui:VisualElement name="expFill" class="bar-fill exp-fill" />
+                </ui:VisualElement>
+                <ui:Label name="expValue" text="0 / 100" class="stat-value" />
+            </ui:VisualElement>
+            <ui:Label name="levelLabel" text="Level 1" class="level-label" />
+        </ui:VisualElement>
+        <ui:VisualElement name="floorPanel" class="floor-panel" picking-mode="Ignore">
+            <ui:Label name="floorLabel" text="B1" class="floor-label" />
+            <ui:Label name="floorName" text="The Forgotten Halls" class="floor-name" />
+            <ui:Label name="nextLabel" text="Next Floor" class="next-label" />
+            <ui:Label name="distLabel" text="120 m" class="dist-label" />
+            <ui:VisualElement name="track" class="track">
+                <ui:VisualElement class="track-line" />
+                <ui:VisualElement name="trackFill" class="track-fill" />
+                <ui:VisualElement name="trackNodes" class="layer" />
+                <ui:VisualElement name="trackMarker" class="track-marker" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="bossPanel" class="boss-panel" picking-mode="Ignore">
+            <ui:Label name="bossName" text="STONE WARDEN" class="boss-name" />
+            <ui:VisualElement class="bar boss-bar">
+                <ui:VisualElement name="bossTrail" class="bar-trail" />
+                <ui:VisualElement name="bossFill" class="bar-fill boss-fill" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="toast" class="toast" picking-mode="Ignore">
+            <ui:Label name="toastLabel" text="" class="toast-label" />
+        </ui:VisualElement>
+        <ui:VisualElement name="letterboxTop" class="letterbox letterbox-top" picking-mode="Ignore" />
+        <ui:VisualElement name="letterboxBottom" class="letterbox letterbox-bottom" picking-mode="Ignore" />
+        <ui:VisualElement name="centerPanel" class="center-panel" picking-mode="Ignore">
+            <ui:Label name="centerTitle" text="B1" class="center-title" />
+            <ui:VisualElement class="center-rule" />
+            <ui:Label name="centerSubtitle" text="The Forgotten Halls" class="center-subtitle" />
+        </ui:VisualElement>
+        <ui:VisualElement name="counterPanel" class="counter-panel" picking-mode="Ignore">
+            <ui:VisualElement class="counter-row">
+                <ui:Label text="X" class="counter-key" />
+                <ui:Label name="counterLabel" text="COUNTER!" class="counter-label" />
+            </ui:VisualElement>
+            <ui:VisualElement class="counter-timer">
+                <ui:VisualElement name="counterTimerFill" class="counter-timer-fill" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="levelUpPanel" class="layer levelup-panel hidden" picking-mode="Ignore">
+            <ui:Label text="LEVEL UP" class="levelup-title" />
+            <ui:Label name="levelUpSub" text="Choose a new skill" class="levelup-sub" />
+            <ui:VisualElement name="cards" class="cards" />
+            <ui:Label text="Left / Right  Select       X  Confirm" class="levelup-hint" />
+        </ui:VisualElement>
+        <ui:VisualElement name="titlePanel" class="layer title-panel hidden" picking-mode="Ignore">
+            <ui:VisualElement class="title-logo" />
+            <ui:Label text="A DESCENT INTO THE CRYPT" class="title-tagline" />
+            <ui:Label name="titlePrompt" text="Press X to Begin" class="title-prompt" />
+            <ui:Label text="Arrow Keys: Move  •  X: Attack  •  Z: Guard&#10;Tap Z the instant an enemy strikes to Parry, then press X to Counter" class="title-controls" />
+            <ui:Label name="titleBest" text="" class="title-best" />
+        </ui:VisualElement>
+        <ui:VisualElement name="gameOverPanel" class="layer gameover-panel hidden" picking-mode="Ignore">
+            <ui:Label text="YOU HAVE FALLEN" class="gameover-title" />
+            <ui:Label name="gameOverStats" text="" class="gameover-stats" />
+            <ui:Label name="gameOverPrompt" text="Press X to Rise Again" class="title-prompt" />
+        </ui:VisualElement>
+        <ui:VisualElement name="flash" class="layer flash" picking-mode="Ignore" />
+        <ui:VisualElement name="fade" class="layer fade" picking-mode="Ignore" />
+    </ui:VisualElement>
+</ui:UXML>

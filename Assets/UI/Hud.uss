@@ -1,0 +1,620 @@
+.root {
+    flex-grow: 1;
+    -unity-font: url("project://database/Assets/UI/Fonts/Cinzel.ttf");
+    color: rgb(240, 232, 218);
+}
+
+.layer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+/* Stats (top-left) */
+
+.stats {
+    position: absolute;
+    left: 28px;
+    top: 22px;
+    width: 470px;
+    transition-duration: 0.6s;
+}
+
+.stat-row {
+    flex-direction: row;
+    align-items: center;
+    height: 26px;
+}
+
+.stat-label {
+    width: 92px;
+    font-size: 17px;
+    -unity-text-align: middle-left;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.9);
+}
+
+.bar {
+    flex-grow: 1;
+    height: 12px;
+    background-color: rgba(10, 8, 8, 0.75);
+    border-width: 1px;
+    border-color: rgba(190, 170, 140, 0.55);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.bar-trail {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255, 240, 220, 0.55);
+}
+
+.bar-fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.hp-fill {
+    background-color: rgb(205, 38, 38);
+    border-top-width: 3px;
+    border-top-color: rgb(255, 110, 100);
+}
+
+.stamina-fill {
+    background-color: rgb(46, 170, 70);
+    border-top-width: 3px;
+    border-top-color: rgb(140, 235, 140);
+}
+
+.stamina-fill--low {
+    background-color: rgb(190, 150, 40);
+    border-top-color: rgb(250, 220, 120);
+}
+
+.exp-fill {
+    background-color: rgb(40, 130, 220);
+    border-top-width: 3px;
+    border-top-color: rgb(130, 200, 255);
+}
+
+.stat-value {
+    width: 110px;
+    font-size: 15px;
+    -unity-text-align: middle-right;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.9);
+}
+
+.level-label {
+    margin-top: 6px;
+    font-size: 19px;
+    color: rgb(255, 214, 140);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.9);
+}
+
+/* Floor info (top-right) */
+
+.floor-panel {
+    position: absolute;
+    right: 34px;
+    top: 18px;
+    width: 230px;
+    align-items: flex-start;
+    transition-duration: 0.6s;
+}
+
+.floor-label {
+    font-size: 40px;
+    -unity-font-style: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+.floor-name {
+    font-size: 13px;
+    color: rgb(200, 185, 160);
+    margin-top: -4px;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.9);
+}
+
+.next-label {
+    margin-top: 6px;
+    font-size: 17px;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.9);
+}
+
+.dist-label {
+    font-size: 22px;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.9);
+}
+
+.track {
+    margin-top: 10px;
+    width: 220px;
+    height: 16px;
+    justify-content: center;
+}
+
+.track-line {
+    height: 2px;
+    background-color: rgba(230, 215, 190, 0.6);
+}
+
+.track-fill {
+    position: absolute;
+    left: 0;
+    top: 7px;
+    height: 2px;
+    width: 0;
+    background-color: rgb(255, 200, 120);
+}
+
+.track-node {
+    position: absolute;
+    top: 3px;
+    width: 10px;
+    height: 10px;
+    margin-left: -5px;
+    rotate: 45deg;
+    border-width: 2px;
+    border-color: rgb(230, 215, 190);
+    background-color: rgba(20, 15, 10, 0.9);
+}
+
+.track-node--done {
+    background-color: rgb(255, 200, 120);
+    border-color: rgb(255, 230, 180);
+}
+
+.track-node--boss {
+    width: 14px;
+    height: 14px;
+    top: 1px;
+    margin-left: -7px;
+    border-color: rgb(255, 120, 80);
+}
+
+.track-marker {
+    position: absolute;
+    top: -2px;
+    width: 8px;
+    height: 20px;
+    margin-left: -4px;
+    background-color: rgb(140, 200, 255);
+    border-radius: 4px;
+}
+
+/* Boss bar (bottom) */
+
+.boss-panel {
+    position: absolute;
+    left: 22%;
+    right: 22%;
+    bottom: 18px;
+    align-items: center;
+    opacity: 0;
+    translate: 0 30px;
+    transition-duration: 0.8s;
+}
+
+.boss-panel--visible {
+    opacity: 1;
+    translate: 0 0;
+}
+
+.boss-name {
+    font-size: 22px;
+    letter-spacing: 6px;
+    margin-bottom: 6px;
+    color: rgb(255, 225, 190);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.95);
+}
+
+.boss-bar {
+    width: 100%;
+    height: 14px;
+}
+
+.boss-fill {
+    background-color: rgb(210, 90, 30);
+    border-top-width: 3px;
+    border-top-color: rgb(255, 170, 90);
+}
+
+/* Letterbox */
+
+.letterbox {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 0;
+    background-color: rgb(0, 0, 0);
+    transition-duration: 0.35s;
+}
+
+.letterbox-top {
+    top: 0;
+}
+
+.letterbox-bottom {
+    bottom: 0;
+}
+
+.letterbox--on {
+    height: 12%;
+}
+
+/* Center title */
+
+.center-panel {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 30%;
+    align-items: center;
+    opacity: 0;
+    transition-duration: 0.7s;
+}
+
+.center-panel--visible {
+    opacity: 1;
+}
+
+.center-title {
+    font-size: 72px;
+    letter-spacing: 10px;
+    -unity-font-style: bold;
+    color: rgb(250, 238, 215);
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.95);
+    scale: 1.15 1.15;
+    transition-duration: 1.2s;
+}
+
+.center-panel--visible .center-title {
+    scale: 1 1;
+}
+
+.center-title--danger {
+    color: rgb(255, 140, 90);
+}
+
+.center-title--glory {
+    color: rgb(255, 215, 130);
+}
+
+.center-subtitle {
+    font-size: 24px;
+    letter-spacing: 4px;
+    margin-top: 4px;
+    color: rgb(215, 200, 175);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.95);
+}
+
+.center-rule {
+    width: 420px;
+    height: 2px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: rgba(230, 200, 150, 0.7);
+}
+
+/* Counter prompt */
+
+.counter-panel {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20%;
+    align-items: center;
+    opacity: 0;
+    scale: 1.6 1.6;
+    transition-duration: 0.18s;
+}
+
+.counter-panel--visible {
+    opacity: 1;
+    scale: 1 1;
+}
+
+.counter-row {
+    flex-direction: row;
+    align-items: center;
+}
+
+.counter-key {
+    width: 64px;
+    height: 64px;
+    margin-right: 18px;
+    border-width: 3px;
+    border-color: rgb(255, 230, 170);
+    border-radius: 10px;
+    background-color: rgba(30, 20, 10, 0.85);
+    font-size: 38px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    color: rgb(255, 235, 190);
+}
+
+.counter-label {
+    font-size: 54px;
+    letter-spacing: 8px;
+    -unity-font-style: bold;
+    color: rgb(255, 215, 120);
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.95);
+}
+
+.counter-timer {
+    margin-top: 14px;
+    width: 360px;
+    height: 6px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 3px;
+}
+
+.counter-timer-fill {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 215, 120);
+    border-radius: 3px;
+}
+
+/* Toast */
+
+.toast {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 40px;
+    align-items: center;
+    opacity: 0;
+    transition-duration: 0.5s;
+}
+
+.toast--visible {
+    opacity: 1;
+}
+
+.toast-label {
+    font-size: 20px;
+    padding: 10px 28px;
+    background-color: rgba(10, 8, 6, 0.72);
+    border-width: 1px;
+    border-color: rgba(220, 190, 140, 0.5);
+    border-radius: 4px;
+    -unity-font: url("project://database/Assets/UI/Fonts/EBGaramond.ttf");
+}
+
+/* Damage numbers */
+
+.damage-number {
+    position: absolute;
+    font-size: 28px;
+    -unity-font-style: bold;
+    color: rgb(255, 245, 225);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 1);
+    -unity-text-align: middle-center;
+    width: 200px;
+    margin-left: -100px;
+}
+
+.damage-number--big {
+    font-size: 54px;
+    color: rgb(255, 205, 90);
+}
+
+.damage-number--player {
+    color: rgb(255, 90, 80);
+}
+
+.damage-number--heal {
+    color: rgb(130, 255, 140);
+}
+
+.damage-number--info {
+    font-size: 24px;
+    color: rgb(170, 220, 255);
+}
+
+/* Level up */
+
+.levelup-panel {
+    background-color: rgba(0, 0, 0, 0.72);
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition-duration: 0.3s;
+}
+
+.levelup-panel--visible {
+    opacity: 1;
+}
+
+.levelup-title {
+    font-size: 48px;
+    letter-spacing: 12px;
+    -unity-font-style: bold;
+    color: rgb(255, 215, 130);
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 1);
+}
+
+.levelup-sub {
+    font-size: 20px;
+    letter-spacing: 3px;
+    color: rgb(215, 200, 175);
+    margin-bottom: 18px;
+}
+
+.cards {
+    flex-direction: row;
+    justify-content: center;
+}
+
+.card {
+    width: 250px;
+    height: 330px;
+    margin-left: 14px;
+    margin-right: 14px;
+    padding: 14px;
+    align-items: center;
+    background-color: rgba(28, 22, 18, 0.95);
+    border-width: 2px;
+    border-color: rgba(150, 125, 95, 0.6);
+    border-radius: 6px;
+    scale: 0.94 0.94;
+    transition-duration: 0.15s;
+}
+
+.card--selected {
+    border-color: rgb(255, 210, 120);
+    background-color: rgba(52, 38, 24, 0.98);
+    scale: 1.04 1.04;
+}
+
+.card-icon {
+    width: 120px;
+    height: 120px;
+    border-width: 2px;
+    border-color: rgba(200, 170, 120, 0.6);
+    border-radius: 4px;
+}
+
+.card-name {
+    margin-top: 12px;
+    font-size: 20px;
+    -unity-text-align: middle-center;
+    color: rgb(255, 225, 170);
+    white-space: normal;
+}
+
+.card-rank {
+    margin-top: 2px;
+    font-size: 14px;
+    color: rgb(170, 155, 130);
+}
+
+.card-desc {
+    margin-top: 10px;
+    font-size: 17px;
+    -unity-text-align: upper-center;
+    white-space: normal;
+    color: rgb(225, 215, 200);
+    -unity-font: url("project://database/Assets/UI/Fonts/EBGaramond.ttf");
+}
+
+.levelup-hint {
+    margin-top: 18px;
+    font-size: 16px;
+    color: rgb(190, 175, 150);
+}
+
+/* Title screen */
+
+.title-panel {
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.35);
+    transition-duration: 1s;
+}
+
+.title-panel--hidden {
+    opacity: 0;
+}
+
+.title-logo {
+    width: 900px;
+    height: 300px;
+    background-image: url("project://database/Assets/Textures/UI/title_logo.png");
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.title-tagline {
+    margin-top: -40px;
+    font-size: 20px;
+    letter-spacing: 6px;
+    color: rgb(200, 185, 160);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+
+.title-prompt {
+    margin-top: 70px;
+    font-size: 28px;
+    letter-spacing: 4px;
+    color: rgb(255, 230, 180);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 1);
+    transition-duration: 0.9s;
+}
+
+.title-prompt--dim {
+    opacity: 0.25;
+}
+
+.title-controls {
+    margin-top: 50px;
+    font-size: 18px;
+    color: rgb(205, 195, 175);
+    -unity-text-align: middle-center;
+    -unity-font: url("project://database/Assets/UI/Fonts/EBGaramond.ttf");
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+
+.title-best {
+    margin-top: 18px;
+    font-size: 15px;
+    color: rgb(170, 155, 130);
+}
+
+/* Game over */
+
+.gameover-panel {
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(10, 0, 0, 0.7);
+    opacity: 0;
+    transition-duration: 1.5s;
+}
+
+.gameover-panel--visible {
+    opacity: 1;
+}
+
+.gameover-title {
+    font-size: 76px;
+    letter-spacing: 10px;
+    color: rgb(200, 50, 40);
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 1);
+}
+
+.gameover-stats {
+    margin-top: 26px;
+    font-size: 24px;
+    -unity-text-align: middle-center;
+    color: rgb(220, 205, 185);
+    -unity-font: url("project://database/Assets/UI/Fonts/EBGaramond.ttf");
+}
+
+/* Overlays */
+
+.flash {
+    background-color: rgb(255, 255, 255);
+    opacity: 0;
+}
+
+.fade {
+    background-color: rgb(0, 0, 0);
+    opacity: 1;
+}
+
+.hidden {
+    display: none;
+}
