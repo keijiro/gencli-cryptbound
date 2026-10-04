@@ -1,0 +1,181 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 53
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eae338eaaa76f4c90bf0c347ad5337a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: glTFastTweaks.Editor::GLTFastTweaks.TextureOverrideSettings
+  defaults:
+    enabled: 1
+    maxSize: 1024
+    compression: 2
+    filterMode: 2
+  entries:
+  - glbGuid: 50ba392e8077f47158157625d7161ccd
+    glbPath: Assets/Models/ghostlord.glb
+    overrides:
+      enabled: 0
+      maxSize: 1024
+      compression: 2
+      filterMode: 2
+  - glbGuid: 21155b406e8134ee18a220ff8b5e10cb
+    glbPath: Assets/Models/golem_torso.glb
+    overrides:
+      enabled: 0
+      maxSize: 1024
+      compression: 2
+      filterMode: 2
+  - glbGuid: c1fc44e2fbe1c4945b512517308e9566
+    glbPath: Assets/Models/skeleton_torso.glb
+    overrides:
+      enabled: 0
+      maxSize: 1024
+      compression: 2
+      filterMode: 2
+  - glbGuid: d2eb8598e5e6a4cf785f187d7f3fb51c
+    glbPath: Assets/Models/prop_chest.glb
+    overrides:
+      enabled: 0
+      maxSize: 1024
+      compression: 2
+      filterMode: 2
+  - glbGuid: f2d2d53538f144949934e7d27130898f
+    glbPath: Assets/Models/skeletonlord_torso.glb
+    overrides:
+      enabled: 0
+      maxSize: 1024
+      compression: 2
+      filterMode: 2
+  - glbGuid: 14fa302b1032847eda91b9b6e6719961
+    glbPath: Assets/Models/player_hand_l.glb
+    overrides:
+      enabled: 0
+      maxSize: 1024
+      compression: 2
+      filterMode: 2
+  - glbGuid: 841d19aefe6cb47189c9f67b23402e90
+    glbPath: Assets/Models/player_torso.glb
+    overrides:
+      enabled: 0
+      maxSize: 1024
+      compression: 2
+      filterMode: 2
+  - glbGuid: d52f39f05190448599c60bbd0fde4b99
+    glbPath: Assets/Models/prop_barrel.glb
+    overrides:
+      enabled: 0
+      maxSize: 1024
+      compression: 2
+      filterMode: 2
+  - glbGuid: 36f3b00762560418797c1bb02e82dda4
+    glbPath: Assets/Models/prop_brazier.glb
+    overrides:
+      enabled: 0
+      maxSize: 1024
+      compression: 2
+      filterMode: 2
+  - glbGuid: 965fde885d9034155b4831e24f57f235
+    glbPath: Assets/Models/prop_pillar.glb
+    overrides:
+      enabled: 0
+      maxSize: 1024
+      compression: 2
+      filterMode: 2
+  - glbGuid: f6915ea4703db4f2f8f16fb9005f0fdf
+    glbPath: Assets/Models/skeleton_hand_r.glb
+    overrides:
+      enabled: 0
+      maxSize: 1024
+      compression: 2
+      filterMode: 2
+  - glbGuid: 077347c10d48846c7b5df8b0292c7d4c
+    glbPath: Assets/Models/prop_rubble.glb
+    overrides:
+      enabled: 0
+      maxSize: 1024
+      compression: 2
+      filterMode: 2
+  - glbGuid: 274fb0a5900d94f1f8ad6d85a7ab31ca
+    glbPath: Assets/Models/skeleton_hand_l.glb
+    overrides:
+      enabled: 0
+      maxSize: 1024
+      compression: 2
+      filterMode: 2
+  - glbGuid: a937b0510464b4105b7ed849e7500385
+    glbPath: Assets/Models/prop_bones.glb
+    overrides:
+      enabled: 0
+      maxSize: 1024
+      compression: 2
+      filterMode: 2
+  - glbGuid: b958879232d8b4e96b1cb4fac8e3c14f
+    glbPath: Assets/Models/golem_hand_r.glb
+    overrides:
+      enabled: 0
+      maxSize: 1024
+      compression: 2
+      filterMode: 2
+  - glbGuid: 0a665e6d8d02b4d6b83da277b2b88fa1
+    glbPath: Assets/Models/skeletonlord_hand_r.glb
+    overrides:
+      enabled: 0
+      maxSize: 1024
+      compression: 2
+      filterMode: 2
+  - glbGuid: 2b6e6f44cf49f42df877dc7786367cf0
+    glbPath: Assets/Models/player_hand_r.glb
+    overrides:
+      enabled: 0
+      maxSize: 1024
+      compression: 2
+      filterMode: 2
+  - glbGuid: eba930b80d9e845faaaa3a030ea88312
+    glbPath: Assets/Models/prop_arch.glb
+    overrides:
+      enabled: 0
+      maxSize: 1024
+      compression: 2
+      filterMode: 2
+  - glbGuid: 8c20a195eb0aa44c1b013e9a822e6766
+    glbPath: Assets/Models/skeletonlord_hand_l.glb
+    overrides:
+      enabled: 0
+      maxSize: 1024
+      compression: 2
+      filterMode: 2
+  - glbGuid: ec52649c49e24403c875488627aab783
+    glbPath: Assets/Models/prop_vase.glb
+    overrides:
+      enabled: 0
+      maxSize: 1024
+      compression: 2
+      filterMode: 2
+  - glbGuid: 2d795aae1166e4a2c99298f742eb2cf5
+    glbPath: Assets/Models/prop_torch.glb
+    overrides:
+      enabled: 0
+      maxSize: 1024
+      compression: 2
+      filterMode: 2
+  - glbGuid: 5e1bef5ff83da4c2d82a1c708cd04867
+    glbPath: Assets/Models/prop_crate.glb
+    overrides:
+      enabled: 0
+      maxSize: 1024
+      compression: 2
+      filterMode: 2
+  - glbGuid: 9f1749d16a6b84cdd832694d0031bfc3
+    glbPath: Assets/Models/ghost.glb
+    overrides:
+      enabled: 0
+      maxSize: 1024
+      compression: 2
+      filterMode: 2
